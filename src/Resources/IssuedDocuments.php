@@ -1,35 +1,31 @@
 <?php
 
-
 namespace Datomatic\FattureInCloud\Resources;
-
 
 abstract class IssuedDocuments extends Documents
 {
-
     protected $path = 'issued_documents';
 
-    const INVOICE = 'invoice';
-    const CREDIT_NOTE = 'credit_note';
-    const RECEIPT = 'receipt';
-    const ORDER = 'order';
-    const QUOTE = 'quote';
-    const PROFORMA = 'proforma';
-    const DELIVERY_NOTE = 'delivery_note';
-    const WORK_REPORT = 'work_report';
-    const SUPPLIER_ORDER = 'supplier_order';
+    public const INVOICE = 'invoice';
+    public const CREDIT_NOTE = 'credit_note';
+    public const RECEIPT = 'receipt';
+    public const ORDER = 'order';
+    public const QUOTE = 'quote';
+    public const PROFORMA = 'proforma';
+    public const DELIVERY_NOTE = 'delivery_note';
+    public const WORK_REPORT = 'work_report';
+    public const SUPPLIER_ORDER = 'supplier_order';
 
-    const STATUS_SENT = 'sent';
-    const STATUS_NOT_SENT = 'not_sent';
-    const STATUS_PENDING = 'pending';
-    const STATUS_PROCESSING = 'processing';
-    const STATUS_DISCARDED = 'discarded';
-    const STATUS_REJECTED = 'rejected';
+    public const STATUS_SENT = 'sent';
+    public const STATUS_NOT_SENT = 'not_sent';
+    public const STATUS_PENDING = 'pending';
+    public const STATUS_PROCESSING = 'processing';
+    public const STATUS_DISCARDED = 'discarded';
+    public const STATUS_REJECTED = 'rejected';
 
-    const PAYMENT_STATUS_PAID = 'paid';
-    const PAYMENT_STATUS_NOT_PAID = 'not_paid';
-    const PAYMENT_STATUS_REVERSED = 'reversed';
-
+    public const PAYMENT_STATUS_PAID = 'paid';
+    public const PAYMENT_STATUS_NOT_PAID = 'not_paid';
+    public const PAYMENT_STATUS_REVERSED = 'reversed';
 
     public function all(array $params = [])
     {
@@ -55,13 +51,13 @@ abstract class IssuedDocuments extends Documents
                 'field' => 'date',
                 'value' => $year.'-12-31',
                 'op' => '<=',
-            ]
+            ],
         ];
 
         return $this->all($params);
     }
 
-    public function sendToSDI($id, array $params = []): array|null
+    public function sendToSDI($id, array $params = []): array | null
     {
         if (in_array($this->type, [self::INVOICE, self::CREDIT_NOTE])) {
             return $this->client->request(
@@ -70,12 +66,14 @@ abstract class IssuedDocuments extends Documents
                 $params
             )['data'];
         }
+
         return [];
     }
 
     protected function parseObjArray($params): array
     {
         $params['data']['type'] = $this->type;
+
         return $params;
     }
 }
