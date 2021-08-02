@@ -2,10 +2,9 @@
 
 namespace Datomatic\FattureInCloud;
 
+use Datomatic\FattureInCloud\Http\Client;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Datomatic\FattureInCloud\FattureInCloud;
-use Datomatic\FattureInCloud\Http\Client;
 
 class FattureInCloudServiceProvider extends PackageServiceProvider
 {

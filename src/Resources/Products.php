@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Datomatic\FattureInCloud\Resources;
-
 
 class Products extends Resource
 {

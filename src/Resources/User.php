@@ -8,11 +8,11 @@ class User extends BaseResource
 
     public function info()
     {
-        return $this->getList('info',true);
+        return $this->getList('info', true);
     }
 
     public function companies()
     {
-        return $this->getList('companies',true);
+        return $this->getList('companies', true);
     }
 }

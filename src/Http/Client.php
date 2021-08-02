@@ -45,7 +45,7 @@ class Client
     public function request($method = 'post', $url = '', $data = [], $force_url = false)
     {
         $requestUrl = $this->endpoint;
-        if (!$force_url) {
+        if (! $force_url) {
             $requestUrl .= "c/" . $this->companyId . "/";
         }
         $requestUrl .= $url;
