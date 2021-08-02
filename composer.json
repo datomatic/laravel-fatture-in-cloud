@@ -1,22 +1,24 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "datomatic/laravel-fatture-in-cloud",
+    "description": "Laravel wrapper for Fatture in Cloud API v2",
     "keywords": [
-        ":vendor_name",
+        "Datomatic",
         "laravel",
-        "package_slug"
+        "fatture-in-cloud",
+        "laravel-fatture-in-cloud"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/datomatic/laravel-fatture-in-cloud",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Alberto",
+            "email": "info@albertoperipolli.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
+        "ext-json": "*",
         "spatie/laravel-package-tools": "^1.4.3",
         "illuminate/contracts": "^8.37"
     },
@@ -30,13 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Datomatic\\FattureInCloud\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Datomatic\\FattureInCloud\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,11 +51,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "Datomatic\\FattureInCloud\\FattureInCloudServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

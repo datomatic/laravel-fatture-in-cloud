@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Datomatic\FattureInCloud\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FattureInCloudCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-fatture-in-cloud';
 
     public $description = 'My command';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace Datomatic\FattureInCloud\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
