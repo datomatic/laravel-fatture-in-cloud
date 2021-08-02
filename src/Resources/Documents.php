@@ -2,11 +2,9 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
-
 abstract class Documents extends Resource
 {
-
-    const AVAILABLE_LANGUAGES = ['it','en','de','fr','es','el','pl','sl'];
+    public const AVAILABLE_LANGUAGES = ['it','en','de','fr','es','el','pl','sl'];
 
     protected $type;
 
@@ -16,5 +14,4 @@ abstract class Documents extends Resource
 
         return parent::all($params);
     }
-
 }

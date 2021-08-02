@@ -8,12 +8,12 @@ class Info extends BaseResource
 
     public function countries()
     {
-        return $this->getList('countries',true);
+        return $this->getList('countries', true);
     }
 
     public function cities()
     {
-        return $this->getList('cities',true);
+        return $this->getList('cities', true);
     }
 
     public function vat_types()
@@ -23,12 +23,12 @@ class Info extends BaseResource
 
     public function languages()
     {
-        return $this->getList('languages',true);
+        return $this->getList('languages', true);
     }
 
     public function templates()
     {
-        return $this->getList('templates',true);
+        return $this->getList('templates', true);
     }
 
     public function payment_methods()
@@ -43,7 +43,7 @@ class Info extends BaseResource
 
     public function currencies()
     {
-        return $this->getList('currencies',true);
+        return $this->getList('currencies', true);
     }
 
     public function revenue_centers()
@@ -58,7 +58,7 @@ class Info extends BaseResource
 
     public function measures()
     {
-        return $this->getList('measures',true);
+        return $this->getList('measures', true);
     }
 
     public function product_categories()

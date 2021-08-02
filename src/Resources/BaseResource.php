@@ -21,7 +21,8 @@ abstract class BaseResource
         $this->client = $client;
     }
 
-    protected function getList($url, $force_url = false){
+    protected function getList($url, $force_url = false)
+    {
         return $this->client->request(
             'get',
             $this->path.'/'.$url,
@@ -29,5 +30,4 @@ abstract class BaseResource
             $force_url
         )["data"];
     }
-
 }
