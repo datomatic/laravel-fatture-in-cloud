@@ -37,9 +37,10 @@ return [
 
 Get FattureInCloud class from service container.
 
-Example on controller
-`public function __construct(FattureInCloud $fic)`
-Example with helper
+Example on controller  
+`public function __construct(FattureInCloud $fic)`  
+
+Example with app helper  
 `$fic = app(Datomatic\FattureInCloud\FattureInCloud::class)`
 
 Use the Fatture In CLoud utilities classes
