@@ -50,7 +50,7 @@ class FattureInCloud
      */
     public function __call(string $name, $args): BaseResource
     {
-        $resource = 'Tecnobit\\FattureInCloud\\Resources\\' . ucfirst($name);
+        $resource = 'Datomatic\\FattureInCloud\\Resources\\' . ucfirst($name);
 
         return new $resource($this->client, ...$args);
     }
