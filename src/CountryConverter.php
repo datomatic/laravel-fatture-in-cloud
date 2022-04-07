@@ -270,4 +270,13 @@ class CountryConverter
     {
         return self::ISOAlpha2Converter[strtoupper($isoCode)] ?? '';
     }
+
+    /**
+     * @param string $name
+     * @return string
+     */
+    public static function fromName(string $name): string
+    {
+        return array_flip(self::ISOAlpha2Converter)[name] ?? '';
+    }
 }
