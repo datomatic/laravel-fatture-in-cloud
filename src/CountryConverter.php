@@ -277,6 +277,6 @@ class CountryConverter
      */
     public static function fromName(string $name): string
     {
-        return array_flip(self::ISOAlpha2Converter)[name] ?? '';
+        return array_flip(self::ISOAlpha2Converter)[$name] ?? '';
     }
 }
