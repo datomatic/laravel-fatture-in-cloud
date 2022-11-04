@@ -52,7 +52,7 @@ use Datomatic\FattureInCloud\FattureInCloud;
 public function __construct(FattureInCloud $fic){}
 
 //Resolve
-$fic = App::make(CartaDelDocenteClient::class);
+$fic = App::make(FattureInCloud::class);
 $fic = app(Datomatic\FattureInCloud\FattureInCloud::class);
 ```
 
