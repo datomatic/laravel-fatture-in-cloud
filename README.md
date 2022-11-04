@@ -2,7 +2,6 @@
 # Laravel wrapper for Fatture in Cloud API v2
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/datomatic/laravel-fatture-in-cloud.svg?style=for-the-badge)](https://packagist.org/packages/datomatic/laravel-fatture-in-cloud)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/datomatic/laravel-fatture-in-cloud/run-tests?style=for-the-badge&label=tests)](https://github.com/datomatic/laravel-fatture-in-cloud/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/datomatic/laravel-fatture-in-cloud/Fix%20PHP%20code%20style%20issues?style=for-the-badge&label=code%20style)](https://github.com/datomatic/laravel-fatture-in-cloud/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/datomatic/laravel-fatture-in-cloud.svg?style=for-the-badge)](https://packagist.org/packages/datomatic/laravel-fatture-in-cloud)
 
