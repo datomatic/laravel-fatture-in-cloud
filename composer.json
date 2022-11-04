@@ -65,7 +65,7 @@
                 "Datomatic\\FattureInCloud\\FattureInCloudServiceProvider"
             ],
             "aliases": {
-                "CartaDelDocente": "Datomatic\\FattureInCloud\\Facades\\FattureInCloud"
+                "FattureInCloud": "Datomatic\\FattureInCloud\\Facades\\FattureInCloud"
             }
         }
     },
