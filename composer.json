@@ -17,18 +17,23 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
+        "datomatic/laravel-enum-helper": "^1.0",
         "ext-json": "*",
-        "spatie/laravel-package-tools": "^1.4.3",
+        "spatie/laravel-package-tools": "^1.13.0",
         "illuminate/contracts": "^8.37||^9.0"
     },
     "require-dev": {
-        "brianium/paratest": "^6.2",
-        "nunomaduro/collision": "^5.3",
-        "orchestra/testbench": "^6.15",
-        "phpunit/phpunit": "^9.3",
-        "spatie/laravel-ray": "^1.23",
-        "vimeo/psalm": "^4.8"
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
@@ -41,18 +46,27 @@
         }
     },
     "scripts": {
-        "psalm": "vendor/bin/psalm",
-        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
                 "Datomatic\\FattureInCloud\\FattureInCloudServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "CartaDelDocente": "Datomatic\\FattureInCloud\\Facades\\FattureInCloud"
+            }
         }
     },
     "minimum-stability": "dev",

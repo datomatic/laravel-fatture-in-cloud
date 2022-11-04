@@ -2,16 +2,21 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
+use Datomatic\FattureInCloud\Enums\DocumentType;
+
 abstract class Documents extends Resource
 {
-    public const AVAILABLE_LANGUAGES = ['it','en','de','fr','es','el','pl','sl'];
+    protected DocumentType $type;
 
-    protected $type;
-
-    public function all(array $params = [])
+    public function all(array $params = []): array
     {
         $params['type'] = $this->type;
 
         return parent::all($params);
+    }
+
+    public static function availableLanguages(): array
+    {
+        return ['it', 'en', 'de', 'fr', 'es', 'el', 'pl', 'sl'];
     }
 }

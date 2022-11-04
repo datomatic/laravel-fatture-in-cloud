@@ -2,7 +2,7 @@
 
 namespace Datomatic\FattureInCloud;
 
-use Datomatic\FattureInCloud\Http\Client;
+use Datomatic\FattureInCloud\Factories\FattureInCloudFactory;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -15,30 +15,8 @@ class FattureInCloudServiceProvider extends PackageServiceProvider
             ->hasConfigFile();
     }
 
-    public function packageRegistered()
+    public function packageRegistered(): void
     {
-        $this->app->singleton(
-            Client::class,
-            function () {
-                $serviceConfig = config('fatture-in-cloud');
-
-                if (empty($serviceConfig)) {
-                    throw new \Exception('You need to set Fatture in cloud config file');
-                }
-
-                return new Client(
-                    $serviceConfig['access_token'],
-                    $serviceConfig['company_id'],
-                    $serviceConfig['endpoint']
-                );
-            }
-        );
-
-        $this->app->singleton(
-            FattureInCloud::class,
-            function () {
-                return new FattureInCloud(app(Client::class));
-            }
-        );
+        $this->app->singleton(FattureInCloud::class, fn () => FattureInCloudFactory::execute());
     }
 }

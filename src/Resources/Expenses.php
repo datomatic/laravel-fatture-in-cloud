@@ -2,7 +2,10 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
+use Datomatic\FattureInCloud\Enums\DocumentType;
+use Datomatic\FattureInCloud\Enums\ReceivedDocumentType;
+
 class Expenses extends ReceivedDocuments
 {
-    protected $type = self::EXPENSE;
+    protected DocumentType $type = ReceivedDocumentType::EXPENSE;
 }

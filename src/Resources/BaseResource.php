@@ -2,32 +2,34 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
+use Datomatic\FattureInCloud\Http\Client;
+
 abstract class BaseResource
 {
     /**
-     * @var \Datomatic\FattureInCloud\Http\Client
+     * @var Client
      */
-    protected $client;
+    protected Client $client;
 
-    protected $path;
+    protected string $path;
 
     /**
      * Initialize Resource.
      *
-     * @param \Datomatic\FattureInCloud\Http\Client $client
+     * @param  Client  $client
      */
-    public function __construct($client)
+    public function __construct(Client $client)
     {
         $this->client = $client;
     }
 
-    protected function getList($url, $force_url = false)
+    protected function getList(string $url, bool $force_url = false): array
     {
         return $this->client->request(
             'get',
             $this->path.'/'.$url,
             [],
             $force_url
-        )["data"];
+        )['data'];
     }
 }

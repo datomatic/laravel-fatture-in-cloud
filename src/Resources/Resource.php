@@ -4,7 +4,7 @@ namespace Datomatic\FattureInCloud\Resources;
 
 abstract class Resource extends BaseResource
 {
-    public function all(array $params = [])
+    public function all(array $params = []): array
     {
         return $this->client->request(
             'get',
@@ -13,7 +13,7 @@ abstract class Resource extends BaseResource
         );
     }
 
-    public function create(array $data)
+    public function create(array $data): array
     {
         return $this->client->request(
             'post',
@@ -22,7 +22,7 @@ abstract class Resource extends BaseResource
         )['data'];
     }
 
-    public function edit($id, array $data)
+    public function edit(int $id, array $data): array
     {
         return $this->client->request(
             'put',
@@ -31,12 +31,12 @@ abstract class Resource extends BaseResource
         )['data'];
     }
 
-    protected function parseObjArray($params)
+    protected function parseObjArray(array $params): array
     {
         return $params;
     }
 
-    public function delete($id, array $params = [])
+    public function delete(int $id, array $params = []): array
     {
         return $this->client->request(
             'delete',
@@ -45,7 +45,7 @@ abstract class Resource extends BaseResource
         );
     }
 
-    public function getById($id, array $params = [])
+    public function getById(int $id, array $params = []): array
     {
         return $this->client->request(
             'get',

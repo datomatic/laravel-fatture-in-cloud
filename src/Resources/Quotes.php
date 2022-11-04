@@ -2,7 +2,10 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
+use Datomatic\FattureInCloud\Enums\DocumentType;
+use Datomatic\FattureInCloud\Enums\IssuedDocumentType;
+
 class Quotes extends IssuedDocuments
 {
-    protected $type = self::QUOTE;
+    protected DocumentType $type = IssuedDocumentType::QUOTE;
 }

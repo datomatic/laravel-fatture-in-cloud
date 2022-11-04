@@ -27,11 +27,10 @@ use Datomatic\FattureInCloud\Resources\BaseResource;
  * @method \Datomatic\FattureInCloud\Resources\PassiveDeliveryNotes   passiveDeliveryNotes()
  * @method \Datomatic\FattureInCloud\Resources\PaymentAccounts        paymentAccounts()
  * @method \Datomatic\FattureInCloud\Resources\PaymentMethods         paymentMethods()
- *
  */
 class FattureInCloud
 {
-    protected $client;
+    protected Client $client;
 
     /**
      * FattureInCloud constructor.
@@ -46,12 +45,13 @@ class FattureInCloud
     /**
      * Return an instance of a Resource based on the method called.
      *
-     * @param mixed $args
+     * @param  mixed  $args
      */
     public function __call(string $name, $args): BaseResource
     {
-        $resource = 'Datomatic\\FattureInCloud\\Resources\\' . ucfirst($name);
+        $resource = 'Datomatic\\FattureInCloud\\Resources\\'.ucfirst($name);
 
+        /** @var BaseResource */
         return new $resource($this->client, ...$args);
     }
 }

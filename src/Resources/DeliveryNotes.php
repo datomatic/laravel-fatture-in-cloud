@@ -2,7 +2,10 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
+use Datomatic\FattureInCloud\Enums\DocumentType;
+use Datomatic\FattureInCloud\Enums\IssuedDocumentType;
+
 class DeliveryNotes extends IssuedDocuments
 {
-    protected $type = self::DELIVERY_NOTE;
+    protected DocumentType $type = IssuedDocumentType::DELIVERY_NOTE;
 }
