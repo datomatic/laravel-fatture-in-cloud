@@ -60,7 +60,7 @@ Use the Fatture In CLoud utilities classes
 
 `$fic->clients()->create([... user array...]);`
 
-Please see the functionalities and the array to pass on [Official Documentation](https://fattureincloud.docs.stoplight.io)  
+Please see the functionalities and the array to pass on [Official Documentation](https://developers.fattureincloud.it/api-reference)  
 
 This is the utilities covered:
 - user()
