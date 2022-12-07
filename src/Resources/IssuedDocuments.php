@@ -44,7 +44,7 @@ abstract class IssuedDocuments extends Documents
         return [];
     }
 
-    protected function parseObjArray(array $params): array
+    protected function parseDataArray(array $params): array
     {
         $params['data']['type'] = $this->type;
 
