@@ -31,14 +31,14 @@ abstract class IssuedDocuments extends Documents
         return $this->all($params);
     }
 
-    public function sendToSDI(int $id, array $params = ['data' => []]): array
+    public function sendToSDI(int $id, array $data = ['data' => []]): array
     {
         if (in_array($this->type, [IssuedDocumentType::INVOICE, IssuedDocumentType::CREDIT_NOTE])) {
-            return $this->client->request(
-                'post',
-                $this->path.'/'.$id.'/e_invoice/send',
-                $params
-            )['data'];
+            return $this->requestData(
+                method: 'post',
+                path: $id.'/e_invoice/send',
+                data: $data
+            );
         }
 
         return [];
