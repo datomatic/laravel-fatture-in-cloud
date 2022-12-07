@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.1.0 - 2022-12-07
+
+update resource `all` method with generators
+refactoring
+
 ## v1.0.0 - 2022-11-04
 
 - Global refactoring
