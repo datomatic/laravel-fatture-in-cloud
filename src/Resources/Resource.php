@@ -30,7 +30,7 @@ abstract class Resource extends BaseResource
                     $page++;
                 } while ($response['next_page_url'] !== null);
             }
-        );
+        )->all();
     }
 
     public function create(array $data): array
