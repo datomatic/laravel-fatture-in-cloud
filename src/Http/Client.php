@@ -26,18 +26,18 @@ class Client
      * Exec API call.
      *
      * @param  string  $method
-     * @param  string  $url
+     * @param  string  $path
      * @param  array  $data
      * @param  bool  $forceUrl
      * @return array
      */
-    public function request(string $method = 'post', string $url = '', array $data = [], bool $forceUrl = false): array
+    public function request(string $method = 'post', string $path = '', array $data = [], bool $forceUrl = false): array
     {
         $requestUrl = $this->endpoint;
         if (! $forceUrl) {
             $requestUrl .= 'c/'.$this->companyId.'/';
         }
-        $requestUrl .= $url;
+        $requestUrl .= $path;
 
         $response = Http::withToken($this->accessToken)->$method($requestUrl, $data);
 

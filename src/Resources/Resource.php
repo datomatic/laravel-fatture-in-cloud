@@ -2,55 +2,69 @@
 
 namespace Datomatic\FattureInCloud\Resources;
 
+use Illuminate\Support\LazyCollection;
+
 abstract class Resource extends BaseResource
 {
-    public function all(array $params = []): array
+    public function all(array $data = []): array
     {
-        return $this->client->request(
-            'get',
-            $this->path,
-            $params
+        if (isset($data['page'])) {
+            $this->requestData(
+                method: 'get',
+                data: $data
+            );
+        }
+
+        return LazyCollection::make(
+            function () use ($data) {
+                $page = 1;
+                do {
+                    $data['page'] = $page;
+                    $response = $this->request(
+                        method: 'get',
+                        data: $data
+                    );
+                    foreach ($response['data'] as $result) {
+                        yield $result;
+                    }
+                    $page++;
+                } while ($response['next_page_url'] !== null);
+            }
         );
     }
 
     public function create(array $data): array
     {
-        return $this->client->request(
-            'post',
-            $this->path,
-            $this->parseObjArray($data)
-        )['data'];
+        return $this->requestData(
+            method: 'post',
+            data: $data
+        );
     }
 
     public function edit(int $id, array $data): array
     {
-        return $this->client->request(
-            'put',
-            $this->path.'/'.$id,
-            $this->parseObjArray($data)
-        )['data'];
-    }
-
-    protected function parseObjArray(array $params): array
-    {
-        return $params;
-    }
-
-    public function delete(int $id, array $params = []): array
-    {
-        return $this->client->request(
-            'delete',
-            $this->path.'/'.$id,
-            $params
+        return $this->requestData(
+            method: 'put',
+            path: $id,
+            data: $data
         );
     }
 
-    public function getById(int $id, array $params = []): array
+    public function delete(int $id, array $data = []): ?array
     {
-        return $this->client->request(
-            'get',
-            $this->path.'/'.$id,
-            $params
-        )['data'];
+        return $this->request(
+            method: 'delete',
+            path: $id,
+            data: $data
+        );
+    }
+
+    public function getById(int $id, array $data = []): array
+    {
+        return $this->requestData(
+            method: 'get',
+            path: $id,
+            data: $data
+        );
     }
 }
