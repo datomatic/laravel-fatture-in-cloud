@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.1.6 - 2023-01-04
+
+fix getById return
+
 ## v1.1.5 - 2023-01-04
 
 fix type in all and getById methods
