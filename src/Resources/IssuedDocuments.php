@@ -8,7 +8,7 @@ abstract class IssuedDocuments extends Documents
 {
     protected string $path = 'issued_documents';
 
-    public function getByNumber(int $number, int $year): array
+    public function getByNumber(int $number, int $year): ?array
     {
         $params['filter'] = [
             [
@@ -28,7 +28,7 @@ abstract class IssuedDocuments extends Documents
             ],
         ];
 
-        return $this->all($params);
+        return $this->all($params)[0] ?? null;
     }
 
     public function sendToSDI(int $id, array $data = ['data' => []]): array
