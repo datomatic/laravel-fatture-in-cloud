@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.1.8 - 2023-01-17
+
+Fix resource without pagination
+
 ## v1.1.6 - 2023-01-04
 
 fix getById return
