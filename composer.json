@@ -1,5 +1,5 @@
 {
-    "name": "datomatic/laravel-fatture-in-cloud",
+    "name": "nocodelab/laravel-fatture-in-cloud",
     "description": "Laravel wrapper for Fatture in Cloud API v2",
     "keywords": [
         "Datomatic",
@@ -7,7 +7,7 @@
         "fatture-in-cloud",
         "laravel-fatture-in-cloud"
     ],
-    "homepage": "https://github.com/datomatic/laravel-fatture-in-cloud",
+    "homepage": "https://github.com/nocodelab/laravel-fatture-in-cloud",
     "license": "MIT",
     "authors": [
         {
