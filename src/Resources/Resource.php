@@ -28,7 +28,7 @@ abstract class Resource extends BaseResource
                         yield $result;
                     }
                     $page++;
-                } while (array_key_exists('next_page_url',$response) && $response['next_page_url'] !== null);
+                } while (array_key_exists('next_page_url', $response) && $response['next_page_url'] !== null);
             }
         )->all();
     }
