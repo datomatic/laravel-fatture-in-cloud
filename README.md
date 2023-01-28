@@ -24,7 +24,7 @@ composer require datomatic/laravel-fatture-in-cloud
 
 Optionally, you can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Datomatic\FattureInCloud\FattureInCloudServiceProvider" --tag="laravel-fatture-in-cloud-config"
+php artisan vendor:publish --provider="Datomatic\FattureInCloud\FattureInCloudServiceProvider" --tag="fatture-in-cloud-config"
 ```
 
 This is the contents of the published config file:
@@ -44,7 +44,7 @@ Get FattureInCloud class from service container or using `FattureInCloud` Facade
 ```php
 use Datomatic\FattureInCloud\Facades\FattureInCloud;
 //Facade
-FattureInCloud::invoice()->...
+FattureInCloud::invoices()->...
 
 use Datomatic\FattureInCloud\FattureInCloud;
 
