@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.1.9 - 2023-02-15
+
+Laravel 10 support
+
 ## v1.1.8 - 2023-01-17
 
 Fix resource without pagination
