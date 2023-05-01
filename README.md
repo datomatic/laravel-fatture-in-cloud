@@ -56,13 +56,13 @@ $fic = App::make(FattureInCloud::class);
 $fic = app(Datomatic\FattureInCloud\FattureInCloud::class);
 ```
 
-Use the Fatture In CLoud utilities classes
+Use the Fatture In Cloud utilities classes
 
 `$fic->clients()->create([... user array...]);`
 
-Please see the functionalities and the array to pass on [Official Documentation](https://developers.fattureincloud.it/api-reference)  
+Please see the functionalities and the array to pass on [Official Documentation](https://developers.fattureincloud.it/api-reference).
 
-This is the utilities covered:
+The resources covered are:
 - user()
 - info()
 - products()
@@ -82,6 +82,22 @@ This is the utilities covered:
 - passiveDeliveryNotes()
 - paymentAccounts()
 - paymentMethods()
+
+Each resource has the same methods available:
+
+- `all(array $data = [])`
+- `create(array $data)`
+- `edit(int $id, array $data)`
+- `delete(int $id, array $data = [])`
+- `getById(int $id, array $data = [])`
+
+The methods will return an array with the response from Fatture in Cloud API (except for the delete method that may return null).
+
+For example, to fetch all clients  (according to [Official Documentation](https://developers.fattureincloud.it/api-reference/#get-/c/-company_id-/entities/clients)) you should call:
+
+```php
+$fic->clients()->all(['fieldset' => 'detailed'])
+```
 
 ### Enums
 
