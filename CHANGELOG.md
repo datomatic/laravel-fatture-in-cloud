@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.1.10 - 2023-05-10
+
+- Fixed a bug preventing to fetch a specific page from a resource
+
 ## v1.1.9 - 2023-02-15
 
 Laravel 10 support
