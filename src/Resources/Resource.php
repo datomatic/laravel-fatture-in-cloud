@@ -9,7 +9,7 @@ abstract class Resource extends BaseResource
     public function all(array $data = []): array
     {
         if (isset($data['page'])) {
-            $this->requestData(
+            return $this->requestData(
                 method: 'get',
                 data: $data
             );
