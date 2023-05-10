@@ -6,17 +6,12 @@ use Datomatic\FattureInCloud\Http\Client;
 
 abstract class BaseResource
 {
-    /**
-     * @var Client
-     */
     protected Client $client;
 
     protected string $path;
 
     /**
      * Initialize Resource.
-     *
-     * @param  Client  $client
      */
     public function __construct(Client $client)
     {

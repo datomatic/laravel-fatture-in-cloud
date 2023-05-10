@@ -9,9 +9,6 @@ class Client
     /**
      * Auth constructor.
      *
-     * @param  string  $accessToken
-     * @param  string  $companyId
-     * @param  string  $endpoint
      *
      * @throws \Exception
      */
@@ -24,12 +21,6 @@ class Client
 
     /**
      * Exec API call.
-     *
-     * @param  string  $method
-     * @param  string  $path
-     * @param  array  $data
-     * @param  bool  $forceUrl
-     * @return array
      */
     public function request(string $method = 'post', string $path = '', array $data = [], bool $forceUrl = false): array
     {
