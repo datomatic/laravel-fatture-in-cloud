@@ -38,11 +38,12 @@ abstract class BaseResource
         return $params;
     }
 
-    protected function getList(string $url, bool $forceUrl = false): array
+    protected function getList(string $url, bool $forceUrl = false, array $data = []): array
     {
         return $this->requestData(
             method: 'get',
             path: $url,
+            data: $data,
             forceUrl: $forceUrl
         );
     }
