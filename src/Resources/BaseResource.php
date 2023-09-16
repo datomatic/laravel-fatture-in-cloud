@@ -18,7 +18,7 @@ abstract class BaseResource
         $this->client = $client;
     }
 
-    protected function request(string $method = 'get', null|int|string $path = null, array $data = [], bool $forceUrl = false): array
+    protected function request(string $method = 'get', int|string $path = null, array $data = [], bool $forceUrl = false): array
     {
         return $this->client->request(
             method: $method,
@@ -28,7 +28,7 @@ abstract class BaseResource
         );
     }
 
-    protected function requestData(string $method = 'get', null|int|string $path = null, array $data = [], bool $forceUrl = false): array
+    protected function requestData(string $method = 'get', int|string $path = null, array $data = [], bool $forceUrl = false): array
     {
         return $this->request($method, $path, $data, $forceUrl)['data'];
     }
