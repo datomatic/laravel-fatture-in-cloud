@@ -61,9 +61,9 @@ class Info extends BaseResource
         return $this->getList('measures', true);
     }
 
-    public function product_categories(): array
+    public function product_categories(string $context): array
     {
-        return $this->getList('product_categories');
+        return $this->getList('product_categories', data: ['context' => $context]);
     }
 
     public function received_document_categories(): array
