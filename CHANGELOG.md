@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.3.0 - 2024-03-14
+
+- Laravel 11 support
+
 ## v1.2.0 - 2023-09-16
 
 Refactor the product_categories method to accept a context parameter and update the getList function call accordingly
