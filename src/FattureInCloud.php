@@ -20,6 +20,8 @@ use Datomatic\FattureInCloud\Resources\BaseResource;
  * @method \Datomatic\FattureInCloud\Resources\DeliveryNotes          deliveryNotes()
  * @method \Datomatic\FattureInCloud\Resources\CreditNotes            creditNotes()
  * @method \Datomatic\FattureInCloud\Resources\Orders                 orders()
+ * @method \Datomatic\FattureInCloud\Resources\SelfOwnInvoices        selfOwnInvoices()
+ * @method \Datomatic\FattureInCloud\Resources\SelfSupplierInvoices   selfSupplierInvoices()
  * @method \Datomatic\FattureInCloud\Resources\WorkReports            work_reports()
  * @method \Datomatic\FattureInCloud\Resources\SupplierOrders         supplierOrders()
  * @method \Datomatic\FattureInCloud\Resources\Expenses               expenses()
