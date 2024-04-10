@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.4.0 - 2024-04-10
+
+- added selfOwnInvoices and selfSupplierInvoices API
+
 ## v1.3.0 - 2024-03-14
 
 - Laravel 11 support
