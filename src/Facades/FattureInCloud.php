@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Datomatic\FattureInCloud\Resources\DeliveryNotes deliveryNotes()
  * @method static \Datomatic\FattureInCloud\Resources\CreditNotes creditNotes()
  * @method static \Datomatic\FattureInCloud\Resources\Orders orders()
+ * @method static \Datomatic\FattureInCloud\Resources\SelfOwnInvoices selfOwnInvoices()
+ * @method static \Datomatic\FattureInCloud\Resources\SelfSupplierInvoices selfSupplierInvoices()
  * @method static \Datomatic\FattureInCloud\Resources\WorkReports work_reports()
  * @method static \Datomatic\FattureInCloud\Resources\SupplierOrders supplierOrders()
  * @method static \Datomatic\FattureInCloud\Resources\Expenses expenses()
