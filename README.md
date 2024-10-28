@@ -37,6 +37,8 @@ return [
 ];
 ```
 
+PS: to obtain company_id please see [this article](https://developers.fattureincloud.it/docs/basics/company-scoped-methods/#microscope-where-can-i-find-my-company_id).
+
 ## Usage
 
 Get FattureInCloud class from service container or using `FattureInCloud` Facade.
