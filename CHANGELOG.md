@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.5.0 - 2024-11-04
+
+- datomatic/laraverl-enum-helper v2 compatibility
+
 ## v1.4.1 - 2024-04-24
 
 Add new recources methods on Facade phpDoc comment
