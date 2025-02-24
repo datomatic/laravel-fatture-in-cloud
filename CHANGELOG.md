@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.6.0 - 2025-02-24
+
+- Laravel 12 support
+
 ## v1.5.0 - 2024-11-04
 
 - datomatic/laraverl-enum-helper v2 compatibility
