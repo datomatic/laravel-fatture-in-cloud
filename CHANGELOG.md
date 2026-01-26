@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-fatture-in-cloud` will be documented in this file.
 
+## v1.7.0 - 2026-01-26
+
+- Adds verifyXml() to validate e-invoice XML structure and mandatory fields before SDI submission by @ToshiZL
+
 ## v1.6.0 - 2025-02-24
 
 - Laravel 12 support
