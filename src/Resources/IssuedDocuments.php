@@ -44,6 +44,18 @@ abstract class IssuedDocuments extends Documents
         return [];
     }
 
+    public function verifyXml(int $id): array
+    {
+        if (in_array($this->type, [IssuedDocumentType::INVOICE, IssuedDocumentType::CREDIT_NOTE])) {
+            return $this->request(
+                method: 'get',
+                path: $id.'/e_invoice/xml_verify'
+            );
+        }
+
+        return [];
+    }
+
     protected function parseDataArray(array $params): array
     {
         $params['data']['type'] = $this->type;
