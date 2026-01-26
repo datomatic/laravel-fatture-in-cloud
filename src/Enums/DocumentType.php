@@ -2,6 +2,4 @@
 
 namespace Datomatic\FattureInCloud\Enums;
 
-interface DocumentType
-{
-}
+interface DocumentType {}
